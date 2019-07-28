@@ -11,3 +11,43 @@ git clone https://github.com/belfazt/dotfiles ~/.dotfiles
 echo 'export DOTFILES="$HOME/.dotfiles"' >> ~/.zshrc
 echo 'source "$DOTFILES/.zshenv"' >> ~/.zshrc
 ```
+
+
+## Sublime Text Preferences
+
+```json
+{
+  "color_scheme": "Packages/1337 Color Scheme/1337.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    "node_modules"
+  ],
+  "font_size": 13,
+  "hot_exit": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "index_exclude_patterns":
+  [
+    "*.log"
+  ],
+  "remember_open_files": false,
+  "rulers":
+  [
+    60,
+    80,
+    100,
+    120
+  ],
+  "tab_size": 2,
+  "theme": "Material Seti.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
+```
