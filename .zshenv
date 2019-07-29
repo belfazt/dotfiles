@@ -1,6 +1,11 @@
 source ~/.zplug/init.zsh
 
-# Load theme file
+zplug "chrissicool/zsh-256color"
+zplug "plugins/docker-compose", from:oh-my-zsh
+zplug "plugins/bundler", from:oh-my-zsh
+zplug "plugins/pyenv", from:oh-my-zsh
+zplug "plugins/rbenv", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug 'dracula/zsh', as:theme
 
 # Install plugins if there are plugins that have not been installed
@@ -24,12 +29,8 @@ fi
 
 alias pacman='sudo pacman'
 
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
-zplug "plugins/pyenv", from:oh-my-zsh
-zplug "plugins/bundler", from:oh-my-zsh
-zplug "plugins/docker-compose", from:oh-my-zsh
 
 export PATH="$DOTFILES/git-custom/:$PATH"
 
 export EDITOR=vim
+
