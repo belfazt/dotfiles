@@ -31,3 +31,5 @@ zplug "plugins/bundler", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 
 export PATH="$DOTFILES/git-custom/:$PATH"
+
+export EDITOR=vim
