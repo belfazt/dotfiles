@@ -7,6 +7,8 @@ zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug 'dracula/zsh', as:theme
+zplug "lukechilds/zsh-nvm"
+zplug "plugins/nvm", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
