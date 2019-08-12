@@ -1,0 +1,4 @@
+*.sublime-workspace
+docker-compose.yml
+postgres_data/
+.editorconfig
