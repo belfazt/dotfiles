@@ -2,3 +2,4 @@
 docker-compose.yml
 postgres_data/
 .editorconfig
+.python-version
