@@ -31,6 +31,8 @@ fi
 
 alias pacman='sudo pacman'
 
+alias pvpn='sudo pvpn'
+
 
 export PATH="$DOTFILES/git-custom/:$PATH"
 
