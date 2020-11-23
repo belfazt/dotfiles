@@ -9,6 +9,24 @@ zplug "plugins/git", from:oh-my-zsh
 zplug 'dracula/zsh', as:theme
 zplug "lukechilds/zsh-nvm"
 zplug "plugins/nvm", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
+zplug "superbrothers/zsh-kubectl-prompt"
+zplug "plugins/terraform", from:oh-my-zsh
+zplug "plugins/minikube", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
+zplug "plugins/copybuffer", from:oh-my-zsh
+
+function right_prompt() {
+  local color="green"
+
+  if [[ "$ZSH_KUBECTL_CONTEXT" =~ "prod" ]]; then
+    color=red
+  fi
+
+  echo "%{$fg[$color]%}($ZSH_KUBECTL_CONTEXT)%{$reset_color%}"
+}
+RPROMPT='$(right_prompt)'
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -37,4 +55,3 @@ alias pvpn='sudo pvpn'
 export PATH="$DOTFILES/git-custom/:$PATH"
 
 export EDITOR=vim
-
