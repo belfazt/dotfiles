@@ -3,18 +3,15 @@ source ~/.zplug/init.zsh
 zplug "chrissicool/zsh-256color"
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/bundler", from:oh-my-zsh
-zplug "plugins/pyenv", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug 'dracula/zsh', as:theme
-zplug "lukechilds/zsh-nvm"
-zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
 zplug "superbrothers/zsh-kubectl-prompt"
 zplug "plugins/terraform", from:oh-my-zsh
 zplug "plugins/minikube", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
 zplug "plugins/copybuffer", from:oh-my-zsh
+zplug "plugins/asdf", from:oh-my-zsh
 
 function right_prompt() {
   local color="green"
@@ -39,14 +36,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 alias pacman='sudo pacman'
 
 alias pvpn='sudo pvpn'
@@ -56,3 +45,10 @@ alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cl
 export PATH="$DOTFILES/git-custom/:$PATH"
 
 export EDITOR=vim
+
+alias dcr="docker-compose restart"
+alias dce="docker-compose exec"
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+alias dcs="docker-compose stop"

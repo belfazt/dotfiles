@@ -1,53 +1,19 @@
 # dotfiles
 
-Install the following packages
-
-- `rbenv`
-- `pyenv`
-- `zplug`
+## Previous Requirements
+- [git](https://git-scm.com/)
+- [asdf-vm](https://asdf-vm.com/)
+- [docker](https://docs.docker.com/engine/install/)
+- [zsh](https://www.zsh.org/)
+- [oh-my-zsh](https://ohmyz.sh/)
+- [zplug](https://github.com/zplug/zplug)
 
 ```sh
 git clone https://github.com/belfazt/dotfiles ~/.dotfiles
 echo 'export DOTFILES="$HOME/.dotfiles"' >> ~/.zshrc
 echo 'source "$DOTFILES/.zshenv"' >> ~/.zshrc
-```
+git config --global core.excludesfile $DOTFILES/.gitignore_global
 
-
-## Sublime Text Preferences
-
-```json
-{
-  "color_scheme": "Packages/1337 Color Scheme/1337.tmTheme",
-  "ensure_newline_at_eof_on_save": true,
-  "folder_exclude_patterns":
-  [
-    ".svn",
-    ".git",
-    ".hg",
-    "CVS",
-    "node_modules"
-  ],
-  "font_size": 13,
-  "hot_exit": false,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "index_exclude_patterns":
-  [
-    "*.log"
-  ],
-  "remember_open_files": false,
-  "rulers":
-  [
-    60,
-    80,
-    100,
-    120
-  ],
-  "tab_size": 2,
-  "theme": "Material Seti.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
-}
+# forget about HTTPS whenever talking with github through git
+git config --global url.ssh://git@github.com:.insteadOf https://github.com/
 ```
